@@ -1,8 +1,9 @@
 Package: rvMF
 Title: Fast Generation of von Mises-Fisher Distributed Random Vectors
 Version: 0.0.0.9000
-Authors@R: 
-    person("Seungwoo Kang", "Hee-Seok Oh", email="kangsw0401@snu.ac.kr", role = c("aut", "cre"))
+Authors@R: c(
+  person("Seungwoo", "Kang", email = "kangsw0401@snu.ac.kr", role = c("aut", "cre")),
+  person("Hee-Seok", "Oh", role = c("aut")))
 Description: Fast generation of von Mises-Fisher distributed random vectors. References to be added.
 License: GPL (>= 3)
 Encoding: UTF-8

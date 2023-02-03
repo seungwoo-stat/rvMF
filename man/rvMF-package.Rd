@@ -4,12 +4,17 @@
 \name{rvMF-package}
 \alias{rvMF-package}
 \alias{_PACKAGE}
-\title{rvMF: What the Package Does (One Line, Title Case)}
+\title{rvMF: Fast Generation of von Mises-Fisher Distributed Random Vectors}
 \description{
-What the package does (one paragraph).
+Fast generation of von Mises-Fisher distributed random vectors. References to be added.
 }
 \author{
-\strong{Maintainer}: First Last \email{first.last@example.com} (\href{https://orcid.org/YOUR-ORCID-ID}{ORCID})
+\strong{Maintainer}: Seungwoo Kang \email{kangsw0401@snu.ac.kr}
+
+Authors:
+\itemize{
+  \item Hee-Seok Oh
+}
 
 }
 \keyword{internal}
