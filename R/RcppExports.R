@@ -2,6 +2,6 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 rvMF64 <- function(n, p, kappa, log_const) {
-    .Call('_rvMF_rvMF64', PACKAGE = 'rvMF', n, p, kappa, log_const)
+    .Call(`_rvMF_rvMF64`, n, p, kappa, log_const)
 }
 

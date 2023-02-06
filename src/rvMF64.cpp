@@ -49,7 +49,7 @@ int i,j=-1,imax,last=0;
 
   /* If pi(0)<1/2^30, generate from largest P up, then largest down */
   else{
-    imax=floor((-m-1+2.*kappa+sqrt((m+1-2*kappa)*(m+1-2*kappa)-4*m*(1-kappa)))/2.)+1; /* pi(l) attains max at l=imax */
+    imax=ceil((-m-1+2.*kappa+sqrt((m+1-2*kappa)*(m+1-2*kappa)-4*m*(1-kappa)))/2.); /* pi(l) attains max at l=imax */
   p=t=exp(-log_conf+lgamma(m)-lgamma(m/2.0)+imax*log(2*kappa)+lgamma(m/2.0+imax)-lgamma(imax+1)-lgamma(m+imax));
   /* imax to up */
   for(i=imax+1;t*2147483648.>1;i++) t*=(2*kappa*(m/2.0+i-1)/(m+i-1)/i);
