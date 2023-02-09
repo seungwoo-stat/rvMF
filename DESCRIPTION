@@ -12,6 +12,7 @@ RoxygenNote: 7.2.3
 LinkingTo: 
     Rcpp
 Imports: 
+    Bessel,
     Rcpp,
     Rfast,
     scModels

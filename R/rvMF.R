@@ -78,7 +78,12 @@ dvMFangle <- function(r,p,kappa){
   if(kappa == 0){
     return(exp((2-p)*log(2) + lgamma(p-1) - lgamma((2*nu+1)/2)*2 + (p-3)/2*log(1-r^2)))
   } else{
-    return(exp(nu*log(kappa/2) - 1/2*log(pi) - log(besselI(kappa,nu)) - lgamma((2*nu+1)/2) +
-                 (p-3)/2*log(1-r^2) + kappa*r))
+    if(Re(Bessel::BesselI(kappa,nu)) != Inf){
+      return(exp(nu*log(kappa/2) - 1/2*log(pi) - log(Re(Bessel::BesselI(kappa,nu))) - lgamma((2*nu+1)/2) +
+                   (p-3)/2*log(1-r^2) + kappa*r))
+    } else{ # more precision
+      return(exp(nu*log(kappa/2) - 1/2*log(pi) - (Bessel::besselIasym(kappa,nu,log = T,expon.scaled = T, k.max=100) + kappa) -
+                   lgamma((2*nu+1)/2) + (p-3)/2*log(1-r^2) + kappa*r))
+    }
   }
 }
