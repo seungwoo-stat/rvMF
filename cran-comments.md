@@ -8,7 +8,7 @@ We tested on four environments:
 
 -   Ubuntu Linux 20.04.1 LTS, R-release, GCC
 
--   Debian Linux, R-devel, GCC ASAN/UBSAN
+-   MacOS Ventura 13.2.1, R-release
 
 There were no ERRORs or WARNINGs.
 
