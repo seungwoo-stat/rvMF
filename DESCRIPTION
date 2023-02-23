@@ -1,10 +1,17 @@
 Package: rvMF
-Title: Fast Generation of von Mises-Fisher Distributed Random Vectors
-Version: 0.0.0.9000
+Title: Fast Generation of von Mises-Fisher Distributed Pseudo-Random Vectors
+Version: 0.0.1
 Authors@R: c(
   person("Seungwoo", "Kang", email = "kangsw0401@snu.ac.kr", role = c("aut", "cre")),
-  person("Hee-Seok", "Oh", role = c("aut")))
-Description: Fast generation of von Mises-Fisher distributed random vectors. References to be added.
+  person("Hee-Seok", "Oh", email = "heeseok@stats.snu.ac.kr", role = c("aut")))
+Description: Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher 
+  distribution on a sphere. This method is fast and efficient when generating a large number of 
+  pseudo-random vectors. Functions to generate random variates and compute density 
+  for the distribution of an inner product between von Mises-Fisher random vector and 
+  its mean direction are also provided.
+URL: https://github.com/seungwoo-stat/rvMF
+BugReports: https://github.com/seungwoo-stat/rvMF/issues
+SystemRequirements: gmp (>= 4.2.3), mpfr (>= 3.0.0)
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -12,7 +19,7 @@ RoxygenNote: 7.2.3
 LinkingTo: 
     Rcpp
 Imports: 
-    Bessel,
-    Rcpp,
-    Rfast,
-    scModels
+    Bessel (>= 0.6-0),
+    Rcpp (>= 1.0.10),
+    Rfast (>= 2.0.6),
+    scModels (>= 1.0.4)
