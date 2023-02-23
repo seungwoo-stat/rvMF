@@ -38,12 +38,12 @@ variables. Journal of Statistical Software, 11(3):1–11, 2004.
 M. Papadakis, M. Tsagris, M. Dimitriadis, S. Fafalios, I. Tsamardinos, M.
 Fasiolo, G. Borboudakis, J. Burkardt, C. Zou, K. Lakiotaki, and C.
 Chatzipantsiou. Rfast: A Collection of Eﬀicient and Extremely Fast R
-Functions, 2022. URL https://CRAN.R-project.org/package=Rfast. R package
+Functions, 2022. \url{https://CRAN.R-project.org/package=Rfast}. R package
 version 2.0.6.
 
 A. T. Wood. Simulation of the von Mises Fisher distribution. Communications
 in Statistics– Simulation and Computation, 23(1):157–164, 1994.
 }
 \seealso{
-\link{rvMFangle}, \link{dvMFangle}, \link[Rfast:rvmf]{Rfast::rvmf}.
+\code{\link[=rvMFangle]{rvMFangle()}}, \code{\link[=dvMFangle]{dvMFangle()}}, \code{\link[Rfast:rvmf]{Rfast::rvmf()}}.
 }

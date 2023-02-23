@@ -22,11 +22,11 @@ dvMFangle(r, p, kappa)
 }
 \value{
 \itemize{
-\item \code{rvMFangle} returns a vector whose components independently follow the
+\item \code{rvMFangle()} returns a vector whose components independently follow the
 aforementioned distribution. The length of the result is determined by \code{n}
-for \code{rvMFangle}.
-\item \code{dvMFangle} returns a vector of density function value. The length of the
-result is determined by the length of \code{r} for \code{dvMFangle}.
+for \code{rvMFangle()}.
+\item \code{dvMFangle()} returns a vector of density function value. The length of the
+result is determined by the length of \code{r} for \code{dvMFangle()}.
 }
 }
 \description{
@@ -35,8 +35,8 @@ product between von Mises-Fisher random vector and its mean direction.
 Specifically, if \eqn{X} follows a von Mises-Fisher distribution with mean
 direction \eqn{\mu}, the inner product \eqn{X'\mu} will be a random variable
 following some distribution. See page 170 of Mardia and Jupp (1999).
-\code{rvMFangle} generates random variates, and \code{dvMFangle} gives the density from
-this distribution. This function partly uses the code from the article
+\code{rvMFangle()} generates random variates, and \code{dvMFangle} gives the density
+from this distribution. This function partly uses the code from the article
 Marsaglia et al. (2004).
 }
 \examples{
