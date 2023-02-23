@@ -4,16 +4,24 @@
 \name{rvMF-package}
 \alias{rvMF-package}
 \alias{_PACKAGE}
-\title{rvMF: Fast Generation of von Mises-Fisher Distributed Random Vectors}
+\title{rvMF: Fast Generation of von Mises-Fisher Distributed Pseudo-Random Vectors}
 \description{
-Fast generation of von Mises-Fisher distributed random vectors. References to be added.
+Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distribution on a sphere. This method is fast and efficient when generating a large number of pseudo-random vectors. Functions to generate random variates and compute density for the distribution of an inner product between von Mises-Fisher random vector and its mean direction are also provided.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/seungwoo-stat/rvMF}
+  \item Report bugs at \url{https://github.com/seungwoo-stat/rvMF/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Seungwoo Kang \email{kangsw0401@snu.ac.kr}
 
 Authors:
 \itemize{
-  \item Hee-Seok Oh
+  \item Hee-Seok Oh \email{heeseok@stats.snu.ac.kr}
 }
 
 }
