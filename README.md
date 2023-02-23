@@ -1,10 +1,12 @@
 # rvMF
 
-Fast generation of von Mises-Fisher distributed random vectors
+Fast Generation of von Mises-Fisher Distributed Pseudo-Random Vectors
 
-Details to be added
+Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distribution on a sphere. This method is fast and efficient when generating a large number of pseudo-random vectors. Functions to generate random variates and compute density for the distribution of an inner product between von Mises-Fisher random vector and its mean direction are also provided.
 
-To install and use the package:
+More details to be added.
+
+This package will appear on CRAN shortly. To install and use the package:
 
 ``` r
 devtools::install_github("seungwoo-stat/rvMF")
