@@ -1,14 +1,37 @@
 Rcpp::sourceCpp("src/rvMF64.cpp")
 
-#' Fast random vectors generator from a von Mises-Fisher distribution
+#' von Mises-Fisher Distributed Pseudo-Random Vector Generator
 #'
-#' @param n number of random vectors to generate.
+#' `rvMF()` generates von-Mises Fisher distributed pseudo-random vectors,
+#' without resorting to the rejection-based sampling method proposed by Wood
+#' (1994). This function partly uses the code from the function [Rfast::rvmf()]
+#' and the article Marsaglia et al. (2004).
+#'
+#' @param n number of pseudo-random vectors to generate.
 #' @param mu mean direction.
 #' @param k concentration parameter. \eqn{k\ge 0}.
-#' @return matrix where each row follows iid vMF distribution.
+#' @returns matrix where each row independently follows the specified von
+#'   Mises-Fisher distribution. The number of columns equals the length of `mu`,
+#'   and the number of rows equals `n` for `rvMF`.
+#' @seealso [rvMFangle()], [dvMFangle()], [Rfast::rvmf()].
 #' @examples
 #' rvMF(1e5, c(0,0,1), 10)
 #' rvMF(1e4, c(1,1)/sqrt(2), 0)
+#' @references
+#' K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley
+#' & Sons, Chichester, 1999.
+#'
+#' G. Marsaglia, W. W. Tsang, and J. Wang. Fast generation of discrete random
+#' variables. Journal of Statistical Software, 11(3):1–11, 2004.
+#'
+#' M. Papadakis, M. Tsagris, M. Dimitriadis, S. Fafalios, I. Tsamardinos, M.
+#' Fasiolo, G. Borboudakis, J. Burkardt, C. Zou, K. Lakiotaki, and C.
+#' Chatzipantsiou. Rfast: A Collection of Eﬀicient and Extremely Fast R
+#' Functions, 2022. <https://CRAN.R-project.org/package=Rfast>. R package
+#' version 2.0.6.
+#'
+#' A. T. Wood. Simulation of the von Mises Fisher distribution. Communications
+#' in Statistics– Simulation and Computation, 23(1):157–164, 1994.
 #' @export
 rvMF <- function (n, mu, k)
 {
@@ -29,7 +52,7 @@ rvMF <- function (n, mu, k)
     d1 <- d - 1
     v1 <- Rfast::matrnorm(n, d1)
     v <- v1/sqrt(Rfast::rowsums(v1^2))
-    w <- rvMF64(n,d,k,scModels::chf_1F1(2*k,d1/2,d1))
+    w <- .rvMF64(n,d,k,scModels::chf_1F1(2*k,d1/2,d1))
     S <- cbind(sqrt(1 - w^2) * v, w)
     if (isTRUE(all.equal(ini, mu, check.attributes = FALSE))) {
       x <- S
@@ -50,29 +73,48 @@ rvMF <- function (n, mu, k)
   x
 }
 
-#' Generate random variable following angle between vMF mean direction and random vector
+#' @name vMFangle
+#' @title Inner Product of von Mises-Fisher Random Vector and Mean Direction
+#'
+#' @description
+#' These functions provide information about the distribution of an inner
+#' product between von Mises-Fisher random vector and its mean direction.
+#' Specifically, if \eqn{X} follows a von Mises-Fisher distribution with mean
+#' direction \eqn{\mu}, the inner product \eqn{X'\mu} will be a random variable
+#' following some distribution. See page 170 of Mardia and Jupp (1999).
+#' `rvMFangle()` generates random variates, and `dvMFangle` gives the density
+#' from this distribution. This function partly uses the code from the article
+#' Marsaglia et al. (2004).
 #'
 #' @param n number of random vectors to generate.
-#' @param p dimension of the vMF distribution. i.e., vMF on \eqn{S^{p-1}}, \eqn{p\ge 2}.
+#' @param r vector of quantiles. \eqn{-1\le r\le 1}.
+#' @param p dimension of the sphere. i.e.,
+#'   \ifelse{html}{\out{S<sup>p-1</sup>}}{\eqn{S^{p-1}}}, \eqn{p\ge 2}.
 #' @param kappa concentration parameter. \eqn{kappa\ge 0}.
-#' @return vector where each component follows iid vMF angle distribution.
+#' @returns
+#' * `rvMFangle()` returns a vector whose components independently follow the
+#' aforementioned distribution. The length of the result is determined by `n`
+#' for `rvMFangle()`.
+#'
+#' * `dvMFangle()` returns a vector of density function value. The length of the
+#' result is determined by the length of `r` for `dvMFangle()`.
 #' @examples
 #' rvMFangle(1e5, 2, 10)
 #' rvMFangle(1e4, 3, 0)
-#' @export
-rvMFangle <- function(n,p,kappa) rvMF64(n,p,kappa,scModels::chf_1F1(2*kappa,(p-1)/2,p-1))
-
-#' Probability density function of angle between vMF mean direction and random vector
-#'
-#' @param r vector of quantiles. \eqn{-1\le r\le 1}.
-#' @param p dimension of the vMF distribution. i.e., vMF on \eqn{S^{p-1}}, \eqn{p\ge 2}.
-#' @param kappa concentration parameter. \eqn{kappa\ge 0}.
-#' @return vector of density.
-#' @examples
 #' dvMFangle(seq(-1,1,by=0.01), 2, 10)
 #' dvMFangle(seq(0,1,by=0.01), 3, 0)
+#' @seealso [rvMF] wrapper of `rvMFangle()`.
+#' @references
+#' K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley
+#' & Sons, Chichester, 1999.
+#'
+#' G. Marsaglia, W. W. Tsang, and J. Wang. Fast generation of discrete random
+#' variables. Journal of Statistical Software, 11(3):1–11, 2004.
 #' @export
-# S^(p-1)
+rvMFangle <- function(n,p,kappa) .rvMF64(n,p,kappa,scModels::chf_1F1(2*kappa,(p-1)/2,p-1))
+
+#' @name vMFangle
+#' @export
 dvMFangle <- function(r,p,kappa){
   nu <- p/2-1
   if(kappa == 0){

@@ -66,7 +66,7 @@ int i,j=-1,imax,last=0;
   }
 }
 
-// [[Rcpp::export]]
+// [[Rcpp::export(.rvMF64)]]
 NumericVector rvMF64(int n, int p, double kappa, double log_const) {
   PiP(kappa, p-1, log_const); get5tbls();
   NumericVector l(n);
@@ -80,14 +80,5 @@ NumericVector rvMF64(int n, int p, double kappa, double log_const) {
     else u= EE[j-t4];
     l[i] = 2.*R::rbeta((p-1)/2.0 + u + offset, (p-1)/2.0)-1.;
   }
-  // std::cout << "t5:" << t5 << "\n";
-  // std::cout << "size:" << size << "\n";
-  // std::cout << "EE[0~4]:" << EE[0] << EE[1] << EE[2] << EE[3] << EE[4] << "\n";
-  // std::cout << "offset:" << offset << "\n";
   return l;
 }
-
-
-// /*** R
-// rvmf2(10,1,1)
-// */
