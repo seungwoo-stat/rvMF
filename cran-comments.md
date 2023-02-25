@@ -1,3 +1,8 @@
+## Resubmission
+This is a resubmission. In this version I have:
+
+- Fixed the ligature 'ff'.
+
 ## R CMD check results
 
 We tested on four environments:
