@@ -6,7 +6,7 @@ Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distri
 
 More details to be added.
 
-Version 0.0.1 of this package will appear on CRAN shortly.
+Version 0.0.2 of this package will appear on CRAN shortly.
 To install and use the package:
 
 ``` r
