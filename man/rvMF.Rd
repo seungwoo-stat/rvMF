@@ -37,7 +37,7 @@ variables. Journal of Statistical Software, 11(3):1–11, 2004.
 
 M. Papadakis, M. Tsagris, M. Dimitriadis, S. Fafalios, I. Tsamardinos, M.
 Fasiolo, G. Borboudakis, J. Burkardt, C. Zou, K. Lakiotaki, and C.
-Chatzipantsiou. Rfast: A Collection of Eﬀicient and Extremely Fast R
+Chatzipantsiou. Rfast: A Collection of Efficient and Extremely Fast R
 Functions, 2022. \url{https://CRAN.R-project.org/package=Rfast}. R package
 version 2.0.6.
 
