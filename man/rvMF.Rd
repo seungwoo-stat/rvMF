@@ -25,8 +25,8 @@ without resorting to the rejection-based sampling method proposed by Wood
 and the article Marsaglia et al. (2004).
 }
 \examples{
-rvMF(1e5, c(0,0,1), 10)
-rvMF(1e4, c(1,1)/sqrt(2), 0)
+rvMF(10, c(0,0,1), 10)
+rvMF(10, c(1,1)/sqrt(2), 0)
 }
 \references{
 K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley

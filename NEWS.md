@@ -1,3 +1,7 @@
+# rvMF 0.0.4
+
+-   Changed examples in the manual.
+
 # rvMF 0.0.3
 
 -   Ligatures 'ff' fixed.
