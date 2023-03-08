@@ -41,9 +41,9 @@ Marsaglia et al. (2004).
 }
 \examples{
 rvMFangle(10, 2, 10)
-rvMFangle(10, 3, 0.1)
+rvMFangle(10, 3, 0)
 dvMFangle(seq(-1,1,by=0.01), 2, 10)
-dvMFangle(seq(0,1,by=0.01), 3, 0.1)
+dvMFangle(seq(0,1,by=0.01), 3, 0)
 }
 \references{
 K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley
