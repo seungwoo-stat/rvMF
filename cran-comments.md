@@ -1,3 +1,25 @@
+This is a resubmission:
+
+In response to the comment
+
+"it is an array overrun, not a leak.  And there are lots of usages of 
+malloc in rvMF64.cpp with no check that they succeeded (so Calloc or 
+R_alloc are preferred: see the manual).  Where is the allocated memory 
+freed? (There is no call to free .., and valgrind shows memory leaks).
+
+It should add the formerly failing examples as a test."
+
+We changed all malloc functions to calloc, as suggested.
+
+There is no need to free the allocated memory because all of them are statically allocated.
+They are automatically freed.
+Trying to free them may crash the program: <https://stackoverflow.com/questions/10716013/can-i-free-static-and-automatic-variables-in-c>
+In the previous version 0.0.3, some examples passes the test, whereas one failed.
+If missing the 'free' function was the source of the memory error, all examples should have failed.
+
+I also added the formerly failing example as a test.
+
+
 ## R CMD check results
 
 We tested on four environments:
