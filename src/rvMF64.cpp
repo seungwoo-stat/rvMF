@@ -80,5 +80,6 @@ NumericVector rvMF64(int n, int p, double kappa, double log_const) {
     else u= EE[j-t4];
     l[i] = 2.*R::rbeta((p-1)/2.0 + u + offset, (p-1)/2.0)-1.;
   }
+  free(AA); free(BB); free(CC); free(DD); free(EE); free(P);
   return l;
 }

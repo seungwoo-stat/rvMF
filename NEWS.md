@@ -1,10 +1,10 @@
-# rvMF 0.0.5, 0.0.6
+# rvMF 0.0.5, 0.0.6, 0.0.7
 
 -   Fixed the C++ code to prevent memory leak issue. 
 
 # rvMF 0.0.4
 
--   Changed examples in the manual.
+-   Changed examples in the manual. -> This example has been retrieved in v0.0.6.
 
 # rvMF 0.0.3
 

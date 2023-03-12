@@ -11,11 +11,10 @@ It should add the formerly failing examples as a test."
 
 We changed all malloc functions to calloc, as suggested.
 
-There is no need to free the allocated memory because all of them are statically allocated.
-They are automatically freed.
-Trying to free them may crash the program: <https://stackoverflow.com/questions/10716013/can-i-free-static-and-automatic-variables-in-c>
-In the previous version 0.0.3, some examples passes the test, whereas one failed.
-If missing the 'free' function was the source of the memory error, all examples should have failed.
+I had a confusion (misunderstanding) that the allocated arrays would be freed automatically.
+However, this would be the only case when it is called in the 'main' function.
+Hence, I now free the arrays at the end of the program.
+I also have checked with my linux machine and valgrind---no memory errors occur in the revised version 0.0.7. 
 
 I also added the formerly failing example as a test.
 
