@@ -9,14 +9,10 @@ freed? (There is no call to free .., and valgrind shows memory leaks).
 
 It should add the formerly failing examples as a test."
 
-We changed all malloc functions to calloc, as suggested.
+I checked all memory allocations, and found that the case 'kappa=0' is calling the invalid array address in the function 'rvMFangle()'. However, I decided not to add the formerly failing example as a test. This is because it is an invalid example. Only the case where kappa>0 is handled by the function 'rvMFangle()'. There was a lack of explanation of this issue in the versions 0.0.4--0.0.6. See the description below, for the clang-ASAN and gcc-ASAN error issues.
 
-I had a confusion (misunderstanding) that the allocated arrays would be freed automatically.
-However, this would be the only case when it is called in the 'main' function.
-Hence, I now free the arrays at the end of the program.
-I also have checked with my linux machine and valgrind---no memory errors occur in the revised version 0.0.7. 
+I had a confusion (misunderstanding) that the allocated arrays would be freed automatically. However, this would be the only case when it is called in the 'main' function. Hence, I now free the arrays at the end of the program. I also have checked with my linux machine and valgrind---no memory errors occur in the revised version 0.0.7. 
 
-I did not add the formerly failing example as a test, because it is an invalid example. See the description below, for the clang-ASAN and gcc-ASAN error issues.
 
 ## Check for three additional issues
 
@@ -25,11 +21,9 @@ All three issues have been addressed:
 1. clang-ASAN, gcc-ASAN: For the function 'rvMFangle', the case where kappa=0 was not handled in the previously 
 submitted code. That is why the second example failed. However, I should note that 'rvMFangle' is wrapped by the function
 'rvMF', and the case where kappa=0 is handled in the 'rvMF' function. That is, the function 'rvMFangle(...,..., kappa=0)'
-is never called. I revised the document, and clarified that the parameter 'kappa > 0' for the function 'rvMFangle'.
-I therefore replaced the previous example on the 'rvMFangle' function with kappa = 0.1.
+is never called by the 'rvMF' function. I revised the document, and clarified that the parameter 'kappa > 0' for the function 'rvMFangle'. I therefore replaced the previous example on the 'rvMFangle' function with kappa = 0.1.
 
-2. valgrind: As noted by the CRAN, the source of error was not freeing the malloced (or calloced) array.
-I now free them at the end of the function. I checked this with my linux + valgrind, and no error occurs anymore.
+2. valgrind: As noted by the CRAN, the source of error was not freeing the malloced (or calloced) array. I now free them at the end of the function. I checked this with my linux + valgrind, and no error occurs anymore.
 
 ## R CMD check results
 
