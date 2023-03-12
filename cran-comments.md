@@ -16,9 +16,11 @@ However, this would be the only case when it is called in the 'main' function.
 Hence, I now free the arrays at the end of the program.
 I also have checked with my linux machine and valgrind---no memory errors occur in the revised version 0.0.7. 
 
-I did not add the formerly failing example as a test, because it is a invalid case. See the description below, for the clang-ASAN and gcc-ASAN error issues.
+I did not add the formerly failing example as a test, because it is an invalid example. See the description below, for the clang-ASAN and gcc-ASAN error issues.
 
 ## Check for three additional issues
+
+All three issues have been addressed:
 
 1. clang-ASAN, gcc-ASAN: For the function 'rvMFangle', the case where kappa=0 was not handled in the previously 
 submitted code. That is why the second example failed. However, I should note that 'rvMFangle' is wrapped by the function
