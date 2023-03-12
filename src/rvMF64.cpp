@@ -13,9 +13,9 @@ void get5tbls(){
   int i,j,m,na=0,nb=0,nc=0,nd=0,ne=0;//k
   /* get table sizes, calloc */
   for(i=0;i<size;i++){m=P[i];na+=dg(m,1);nb+=dg(m,2);nc+=dg(m,3);nd+=dg(m,4);ne+=dg(m,5);}
-  AA=(unsigned short*)calloc((na+1),sizeof(short));BB=(unsigned short*)calloc((nb+1),sizeof(short));
-  CC=(unsigned short*)calloc((nc+1),sizeof(short));DD=(unsigned short*)calloc((nd+1),sizeof(short));
-  EE=(unsigned short*)calloc((ne+1),sizeof(short)); /* Adding one more space to prevent calloc(*,0); AddressSanitizer */
+  AA=(unsigned short*)calloc(na,sizeof(short));BB=(unsigned short*)calloc(nb,sizeof(short));
+  CC=(unsigned short*)calloc(nc,sizeof(short));DD=(unsigned short*)calloc(nd,sizeof(short));
+  EE=(unsigned short*)calloc(ne,sizeof(short));
   t1=na<<24; t2=t1+(nb<<18); t3=t2+(nc<<12); t4=t3+(nd<<6); t5=t4+ne;
   na=nb=nc=nd=ne=0;
   /* Fill tables AA,BB,CC,DD,EE */
@@ -43,7 +43,7 @@ int i,j=-1,imax,last=0;
     for(i=1;t*2147483648.>1;i++) t*=(2*kappa*(m/2.0+i-1)/(m+i-1)/i);  /* 2147483648 = 2^31 */
   size=i-1; offset=0;// last=i-2;
   /* Given size, calloc and fill P array, (30-bit integers) */
-  P=(int*)calloc((size+1),sizeof(int)); P[0]=exp(-log_conf)*1073741824+.5; /* add .5 for rounding */
+  P=(int*)calloc(size,sizeof(int)); P[0]=exp(-log_conf)*1073741824+.5; /* add .5 for rounding */
   for(i=1;i<size;i++) {p*=(2*kappa*(m/2.0+i-1)/(m+i-1)/i); P[i]=p*1073741824+.5;} /* 1073741824 = 2^30 */
   }
 
@@ -58,7 +58,7 @@ int i,j=-1,imax,last=0;
   for(i=imax-1;i>=0;i--){t*=((i+1)*(m+i)/(2*kappa)/(m/2.0+i)); if(t*2147483648.<1){j=i;break;} }
   offset=j+1;  size=last-offset+1;
   /* Given size, calloc and fill P array, (30-bit integers) */
-  P=(int*)calloc((size+1),sizeof(int));
+  P=(int*)calloc(size,sizeof(int));
   t=p; P[imax-offset]=p*1073741824+.5;
   for(i=imax+1;i<=last;i++){t*=(2*kappa*(m/2.0+i-1)/(m+i-1)/i);P[i-offset]=t*1073741824+.5;}
   t=p;

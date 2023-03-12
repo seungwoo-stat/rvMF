@@ -90,7 +90,8 @@ rvMF <- function (n, mu, k)
 #' @param r vector of quantiles. \eqn{-1\le r\le 1}.
 #' @param p dimension of the sphere. i.e.,
 #'   \ifelse{html}{\out{S<sup>p-1</sup>}}{\eqn{S^{p-1}}}, \eqn{p\ge 2}.
-#' @param kappa concentration parameter. \eqn{kappa\ge 0}.
+#' @param kappa concentration parameter. \eqn{kappa > 0}. Setting `kappa=0` may
+#'   cause errors.
 #' @returns
 #' * `rvMFangle()` returns a vector whose components independently follow the
 #' aforementioned distribution. The length of the result is determined by `n`
@@ -100,9 +101,9 @@ rvMF <- function (n, mu, k)
 #' result is determined by the length of `r` for `dvMFangle()`.
 #' @examples
 #' rvMFangle(10, 2, 10)
-#' rvMFangle(10, 3, 0)
+#' rvMFangle(10, 3, 0.1)
 #' dvMFangle(seq(-1,1,by=0.01), 2, 10)
-#' dvMFangle(seq(0,1,by=0.01), 3, 0)
+#' dvMFangle(seq(0,1,by=0.01), 3, 0.1)
 #' @seealso [rvMF] wrapper of `rvMFangle()`.
 #' @references
 #' K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley

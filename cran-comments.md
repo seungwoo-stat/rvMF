@@ -16,8 +16,18 @@ However, this would be the only case when it is called in the 'main' function.
 Hence, I now free the arrays at the end of the program.
 I also have checked with my linux machine and valgrind---no memory errors occur in the revised version 0.0.7. 
 
-I also added the formerly failing example as a test.
+I did not add the formerly failing example as a test, because it is a invalid case. See the description below, for the clang-ASAN and gcc-ASAN error issues.
 
+## Check for three additional issues
+
+1. clang-ASAN, gcc-ASAN: For the function 'rvMFangle', the case where kappa=0 was not handled in the previously 
+submitted code. That is why the second example failed. However, I should note that 'rvMFangle' is wrapped by the function
+'rvMF', and the case where kappa=0 is handled in the 'rvMF' function. That is, the function 'rvMFangle(...,..., kappa=0)'
+is never called. I revised the document, and clarified that the parameter 'kappa > 0' for the function 'rvMFangle'.
+I therefore replaced the previous example on the 'rvMFangle' function with kappa = 0.1.
+
+2. valgrind: As noted by the CRAN, the source of error was not freeing the malloced (or calloced) array.
+I now free them at the end of the function. I checked this with my linux + valgrind, and no error occurs anymore.
 
 ## R CMD check results
 

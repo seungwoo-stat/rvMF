@@ -16,7 +16,8 @@ dvMFangle(r, p, kappa)
 \item{p}{dimension of the sphere. i.e.,
 \ifelse{html}{\out{S<sup>p-1</sup>}}{\eqn{S^{p-1}}}, \eqn{p\ge 2}.}
 
-\item{kappa}{concentration parameter. \eqn{kappa\ge 0}.}
+\item{kappa}{concentration parameter. \eqn{kappa > 0}. Setting \code{kappa=0} may
+cause errors.}
 
 \item{r}{vector of quantiles. \eqn{-1\le r\le 1}.}
 }
@@ -41,9 +42,9 @@ Marsaglia et al. (2004).
 }
 \examples{
 rvMFangle(10, 2, 10)
-rvMFangle(10, 3, 0)
+rvMFangle(10, 3, 0.1)
 dvMFangle(seq(-1,1,by=0.01), 2, 10)
-dvMFangle(seq(0,1,by=0.01), 3, 0)
+dvMFangle(seq(0,1,by=0.01), 3, 0.1)
 }
 \references{
 K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley
