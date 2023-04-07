@@ -8,7 +8,7 @@ Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distri
 
 More details to be added.
 
-Version 0.0.7 of this package is available on CRAN:
+Version 0.0.7 of this package is available on [CRAN](https://cran.r-project.org/package=rvMF):
 
 ``` r
 install.packages("rvMF")
