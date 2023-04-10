@@ -24,6 +24,6 @@ library(rvMF)
 
 If error occurs during the installation, it may be related to the package `scModels` that our package depends on. Try installing `scModels` prior to the installation of `rvMF` by `install.packages("scModels")`. Also, check [this](https://github.com/fuchslab/scModels) page.
 
-### References
+### Reference
 
-TBA
+-   Seungwoo Kang and Hee-Seok Oh. (2023) Novel Sampling Method for the von Mises--Fisher Distribution. Manuscript.
