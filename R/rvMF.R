@@ -1,5 +1,3 @@
-Rcpp::sourceCpp("src/rvMF64.cpp")
-
 #' von Mises-Fisher Distributed Pseudo-Random Vector Generator
 #'
 #' `rvMF()` generates von-Mises Fisher distributed pseudo-random vectors,

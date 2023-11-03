@@ -15,7 +15,7 @@ install.packages("rvMF")
 library(rvMF)
 ```
 
-To use the development version of this package:
+To use the development version (0.0.8) of this package:
 
 ``` r
 devtools::install_github("seungwoo-stat/rvMF")

@@ -1,6 +1,6 @@
 Package: rvMF
 Title: Fast Generation of von Mises-Fisher Distributed Pseudo-Random Vectors
-Version: 0.0.7
+Version: 0.0.8
 Authors@R: c(
   person("Seungwoo", "Kang", email = "kangsw0401@snu.ac.kr", role = c("aut", "cre")),
   person("Hee-Seok", "Oh", email = "heeseok@stats.snu.ac.kr", role = c("aut")))

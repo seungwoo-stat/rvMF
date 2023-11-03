@@ -1,3 +1,7 @@
+# rvMF 0.0.8
+
+-   Minor patch: way of linking a C++ function.
+
 # rvMF 0.0.7
 
 -   Patch version, handling three additional issues checked by CRAN:
