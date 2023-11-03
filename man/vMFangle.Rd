@@ -47,11 +47,11 @@ dvMFangle(seq(-1,1,by=0.01), 2, 10)
 dvMFangle(seq(0,1,by=0.01), 3, 0.1)
 }
 \references{
-K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley
+K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John Wiley
 & Sons, Chichester, 1999.
 
 G. Marsaglia, W. W. Tsang, and J. Wang. Fast generation of discrete random
-variables. Journal of Statistical Software, 11(3):1–11, 2004.
+variables. \emph{Journal of Statistical Software}, 11(3):1–11, 2004.
 }
 \seealso{
 \link{rvMF} wrapper of \code{rvMFangle()}.

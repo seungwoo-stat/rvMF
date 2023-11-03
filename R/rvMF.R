@@ -2,7 +2,7 @@
 #'
 #' `rvMF()` generates von-Mises Fisher distributed pseudo-random vectors,
 #' without resorting to the rejection-based sampling method proposed by Wood
-#' (1994). This function partly uses the code from the function [Rfast::rvmf()]
+#' (1994). This function partly uses the code from the function [Rfast::rvmf]
 #' and the article Marsaglia et al. (2004).
 #'
 #' @param n number of pseudo-random vectors to generate.
@@ -11,25 +11,25 @@
 #' @returns matrix where each row independently follows the specified von
 #'   Mises-Fisher distribution. The number of columns equals the length of `mu`,
 #'   and the number of rows equals `n` for `rvMF`.
-#' @seealso [rvMFangle()], [dvMFangle()], [Rfast::rvmf()].
+#' @seealso [rvMFangle], [dvMFangle], [Rfast::rvmf].
 #' @examples
 #' rvMF(10, c(0,0,1), 10)
 #' rvMF(10, c(1,1)/sqrt(2), 0)
 #' @references
-#' K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley
-#' & Sons, Chichester, 1999.
+#' K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John
+#' Wiley & Sons, Chichester, 1999.
 #'
 #' G. Marsaglia, W. W. Tsang, and J. Wang. Fast generation of discrete random
-#' variables. Journal of Statistical Software, 11(3):1–11, 2004.
+#' variables. \emph{Journal of Statistical Software}, 11(3):1–11, 2004.
 #'
 #' M. Papadakis, M. Tsagris, M. Dimitriadis, S. Fafalios, I. Tsamardinos, M.
 #' Fasiolo, G. Borboudakis, J. Burkardt, C. Zou, K. Lakiotaki, and C.
-#' Chatzipantsiou. Rfast: A Collection of Efficient and Extremely Fast R
-#' Functions, 2022. <https://CRAN.R-project.org/package=Rfast>. R package
+#' Chatzipantsiou. \emph{Rfast: A Collection of Efficient and Extremely Fast R
+#' Functions}, 2022. <https://CRAN.R-project.org/package=Rfast>. R package
 #' version 2.0.6.
 #'
-#' A. T. Wood. Simulation of the von Mises Fisher distribution. Communications
-#' in Statistics– Simulation and Computation, 23(1):157–164, 1994.
+#' A. T. Wood. Simulation of the von Mises Fisher distribution. \emph{Communications
+#' in Statistics– Simulation and Computation}, 23(1):157–164, 1994.
 #' @export
 rvMF <- function (n, mu, k)
 {
@@ -104,11 +104,11 @@ rvMF <- function (n, mu, k)
 #' dvMFangle(seq(0,1,by=0.01), 3, 0.1)
 #' @seealso [rvMF] wrapper of `rvMFangle()`.
 #' @references
-#' K. V. Mardia and P. E. Jupp. Directional Statistics, volume 494. John Wiley
+#' K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John Wiley
 #' & Sons, Chichester, 1999.
 #'
 #' G. Marsaglia, W. W. Tsang, and J. Wang. Fast generation of discrete random
-#' variables. Journal of Statistical Software, 11(3):1–11, 2004.
+#' variables. \emph{Journal of Statistical Software}, 11(3):1–11, 2004.
 #' @export
 rvMFangle <- function(n,p,kappa) .rvMF64(n,p,kappa,scModels::chf_1F1(2*kappa,(p-1)/2,p-1))
 

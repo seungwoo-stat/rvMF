@@ -1,6 +1,6 @@
 # rvMF 0.0.8
 
--   Minor patch: way of linking a C++ function.
+-   Minor patch: way of linking a C++ function, typo fix.
 
 # rvMF 0.0.7
 
