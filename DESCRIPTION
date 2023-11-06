@@ -4,11 +4,7 @@ Version: 0.0.8
 Authors@R: c(
   person("Seungwoo", "Kang", email = "kangsw0401@snu.ac.kr", role = c("aut", "cre"), comment=c(ORCID="0000-0001-8082-0794")),
   person("Hee-Seok", "Oh", email = "heeseok@stats.snu.ac.kr", role = c("aut")))
-Description: Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher 
-  distribution on a sphere. This method is fast and efficient when generating a large number of 
-  pseudo-random vectors. Functions to generate random variates and compute density 
-  for the distribution of an inner product between von Mises-Fisher random vector and 
-  its mean direction are also provided.
+Description: Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distribution on a sphere. This method is fast and efficient when generating a large number of pseudo-random vectors. Functions to generate random variates and compute density for the distribution of an inner product between von Mises-Fisher random vector and its mean direction are also provided.
 URL: https://github.com/seungwoo-stat/rvMF
 BugReports: https://github.com/seungwoo-stat/rvMF/issues
 License: GPL (>= 3)
