@@ -17,7 +17,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Seungwoo Kang \email{kangsw0401@snu.ac.kr}
+\strong{Maintainer}: Seungwoo Kang \email{kangsw0401@snu.ac.kr} (\href{https://orcid.org/0000-0001-8082-0794}{ORCID})
 
 Authors:
 \itemize{

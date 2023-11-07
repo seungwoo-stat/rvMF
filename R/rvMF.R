@@ -2,7 +2,7 @@
 #'
 #' `rvMF()` generates von-Mises Fisher distributed pseudo-random vectors,
 #' without resorting to the rejection-based sampling method proposed by Wood
-#' (1994). This function partly uses the code from the function [Rfast::rvmf]
+#' (1994). This function partly uses the code from the function [Rfast::rvmf()]
 #' and the article Marsaglia et al. (2004).
 #'
 #' @param n number of pseudo-random vectors to generate.
@@ -11,7 +11,7 @@
 #' @returns matrix where each row independently follows the specified von
 #'   Mises-Fisher distribution. The number of columns equals the length of `mu`,
 #'   and the number of rows equals `n` for `rvMF`.
-#' @seealso [rvMFangle], [dvMFangle], [Rfast::rvmf].
+#' @seealso [rvMFangle()], [dvMFangle()], [Rfast::rvmf()].
 #' @examples
 #' rvMF(10, c(0,0,1), 10)
 #' rvMF(10, c(1,1)/sqrt(2), 0)
@@ -102,7 +102,7 @@ rvMF <- function (n, mu, k)
 #' rvMFangle(10, 3, 0.1)
 #' dvMFangle(seq(-1,1,by=0.01), 2, 10)
 #' dvMFangle(seq(0,1,by=0.01), 3, 0.1)
-#' @seealso [rvMF] wrapper of `rvMFangle()`.
+#' @seealso [rvMF()] wrapper of `rvMFangle()`.
 #' @references
 #' K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John Wiley
 #' & Sons, Chichester, 1999.

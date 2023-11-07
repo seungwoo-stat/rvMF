@@ -54,5 +54,5 @@ G. Marsaglia, W. W. Tsang, and J. Wang. Fast generation of discrete random
 variables. \emph{Journal of Statistical Software}, 11(3):1–11, 2004.
 }
 \seealso{
-\link{rvMF} wrapper of \code{rvMFangle()}.
+\code{\link[=rvMF]{rvMF()}} wrapper of \code{rvMFangle()}.
 }
