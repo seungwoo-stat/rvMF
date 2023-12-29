@@ -1,6 +1,6 @@
 # rvMF
 
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rvMF)](https://CRAN.R-project.org/package=rvMF)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rvMF)](https://CRAN.R-project.org/package=rvMF) [![CRAN_Downloads](https://cranlogs.r-pkg.org/badges/grand-total/rvMF)](https://CRAN.R-project.org/package=rvMF)
 
 Fast Generation of von Mises-Fisher Distributed Pseudo-Random Vectors
 
