@@ -1,13 +1,13 @@
-#' von Mises-Fisher Distributed Pseudo-Random Vector Generator
+#' von Mises--Fisher Distributed Pseudo-Random Vector Generator
 #'
-#' `rvMF()` generates von-Mises Fisher distributed pseudo-random vectors,
+#' `rvMF()` generates von Mises--Fisher distributed pseudo-random vectors,
 #' without resorting to the rejection-based sampling method proposed by Wood
 #' (1994). This function partly uses the code from the function [Rfast::rvmf()]
 #' and the article Marsaglia et al. (2004).
 #'
 #' @param n number of pseudo-random vectors to generate.
 #' @param mu mean direction.
-#' @param k concentration parameter. \eqn{k\ge 0}.
+#' @param k concentration parameter. \ifelse{html}{\code{k} \out{&ge; 0}}{\eqn{k\ge 0}}.
 #' @returns matrix where each row independently follows the specified von
 #'   Mises-Fisher distribution. The number of columns equals the length of `mu`,
 #'   and the number of rows equals `n` for `rvMF`.
@@ -72,12 +72,12 @@ rvMF <- function (n, mu, k)
 }
 
 #' @name vMFangle
-#' @title Inner Product of von Mises-Fisher Random Vector and Mean Direction
+#' @title Inner Product of von Mises--Fisher Random Vector and Mean Direction
 #'
 #' @description
 #' These functions provide information about the distribution of an inner
-#' product between von Mises-Fisher random vector and its mean direction.
-#' Specifically, if \eqn{X} follows a von Mises-Fisher distribution with mean
+#' product between von Mises--Fisher random vector and its mean direction.
+#' Specifically, if \eqn{X} follows a von Mises--Fisher distribution with mean
 #' direction \eqn{\mu}, the inner product \eqn{X'\mu} will be a random variable
 #' following some distribution. See page 170 of Mardia and Jupp (1999).
 #' `rvMFangle()` generates random variates, and `dvMFangle` gives the density
@@ -85,11 +85,11 @@ rvMF <- function (n, mu, k)
 #' Marsaglia et al. (2004).
 #'
 #' @param n number of random vectors to generate.
-#' @param r vector of quantiles. \eqn{-1\le r\le 1}.
+#' @param r vector of quantiles. \ifelse{html}{\out{-1 &le;} \code{r} \out{&le; 1}}{\eqn{-1\le r\le 1}}.
 #' @param p dimension of the sphere. i.e.,
-#'   \ifelse{html}{\out{S<sup>p-1</sup>}}{\eqn{S^{p-1}}}, \eqn{p\ge 2}.
-#' @param kappa concentration parameter. \eqn{kappa > 0}. Setting `kappa=0` may
-#'   cause errors.
+#'   \ifelse{html}{\out{S<sup>p-1</sup>}}{\eqn{S^{p-1}}}, \ifelse{html}{\code{p} \out{&ge; 2}}{\eqn{p\ge 2}}.
+#' @param kappa concentration parameter. \code{kappa > 0}.
+#'   Setting `kappa = 0` may cause errors.
 #' @returns
 #' * `rvMFangle()` returns a vector whose components independently follow the
 #' aforementioned distribution. The length of the result is determined by `n`

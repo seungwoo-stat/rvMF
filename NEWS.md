@@ -1,3 +1,7 @@
+# rvMF 0.0.8.9000
+
+- Typo fix in the document.
+
 # rvMF 0.0.8
 
 - 	Corrected the way of linking a C++ function.

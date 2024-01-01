@@ -2,7 +2,7 @@
 % Please edit documentation in R/rvMF.R
 \name{rvMF}
 \alias{rvMF}
-\title{von Mises-Fisher Distributed Pseudo-Random Vector Generator}
+\title{von Mises--Fisher Distributed Pseudo-Random Vector Generator}
 \usage{
 rvMF(n, mu, k)
 }
@@ -11,7 +11,7 @@ rvMF(n, mu, k)
 
 \item{mu}{mean direction.}
 
-\item{k}{concentration parameter. \eqn{k\ge 0}.}
+\item{k}{concentration parameter. \ifelse{html}{\code{k} \out{&ge; 0}}{\eqn{k\ge 0}}.}
 }
 \value{
 matrix where each row independently follows the specified von
@@ -19,7 +19,7 @@ Mises-Fisher distribution. The number of columns equals the length of \code{mu},
 and the number of rows equals \code{n} for \code{rvMF}.
 }
 \description{
-\code{rvMF()} generates von-Mises Fisher distributed pseudo-random vectors,
+\code{rvMF()} generates von Mises--Fisher distributed pseudo-random vectors,
 without resorting to the rejection-based sampling method proposed by Wood
 (1994). This function partly uses the code from the function \code{\link[Rfast:rvmf]{Rfast::rvmf()}}
 and the article Marsaglia et al. (2004).
