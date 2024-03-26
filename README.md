@@ -30,4 +30,4 @@ If error occurs during the installation, it may be related to the package `scMod
 
 ### Reference
 
--   Seungwoo Kang and Hee-Seok Oh. (2024) Novel Sampling Method for the von Mises--Fisher Distribution. *Statistics and Computing*. To appear.
+-   Seungwoo Kang and Hee-Seok Oh. (2024) Novel Sampling Method for the von Mises--Fisher Distribution. *Statistics and Computing* **34**(3), 106.
