@@ -3,10 +3,9 @@
 \docType{package}
 \name{rvMF-package}
 \alias{rvMF-package}
-\alias{_PACKAGE}
 \title{rvMF: Fast Generation of von Mises-Fisher Distributed Pseudo-Random Vectors}
 \description{
-Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distribution on a sphere. This method is fast and efficient when generating a large number of pseudo-random vectors. Functions to generate random variates and compute density for the distribution of an inner product between von Mises-Fisher random vector and its mean direction are also provided.
+Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distribution on a sphere. This method is fast and efficient when generating a large number of pseudo-random vectors. Functions to generate random variates and compute density for the distribution of an inner product between von Mises-Fisher random vector and its mean direction are also provided. Details are in Kang and Oh (2024) \doi{10.1007/s11222-024-10419-3}.
 }
 \seealso{
 Useful links:

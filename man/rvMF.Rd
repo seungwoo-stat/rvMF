@@ -21,14 +21,18 @@ and the number of rows equals \code{n} for \code{rvMF}.
 \description{
 \code{rvMF()} generates von Mises--Fisher distributed pseudo-random vectors,
 without resorting to the rejection-based sampling method proposed by Wood
-(1994). This function partly uses the code from the function \code{\link[Rfast:rvmf]{Rfast::rvmf()}}
-and the article Marsaglia et al. (2004).
+(1994). See Kang and Oh (2024) for details. This function partly uses the
+code from the function \code{\link[Rfast:rvmf]{Rfast::rvmf()}} and the article Marsaglia et al.
+(2004).
 }
 \examples{
 rvMF(10, c(0,0,1), 10)
 rvMF(10, c(1,1)/sqrt(2), 0)
 }
 \references{
+S. Kang and H.-S. Oh. Novel sampling method for the von Mises--Fisher
+distribution. \emph{Statistics and Computing}, 34(3):106, 2024.
+
 K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John
 Wiley & Sons, Chichester, 1999.
 

@@ -1,8 +1,7 @@
-This is a patch release (0.0.8):
+This is a patch release (0.1.0):
 
-- 	Corrected the way of linking a C++ function.
-- 	Minor typo fix (line break in the DESCRIPTION file) in the document.
-- 	Added ORCID ID.
+- 	Minor typo fix.
+- 	Updated reference.
 
 ## R CMD check results
 

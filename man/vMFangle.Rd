@@ -36,9 +36,9 @@ product between von Mises--Fisher random vector and its mean direction.
 Specifically, if \eqn{X} follows a von Mises--Fisher distribution with mean
 direction \eqn{\mu}, the inner product \eqn{X'\mu} will be a random variable
 following some distribution. See page 170 of Mardia and Jupp (1999).
-\code{rvMFangle()} generates random variates, and \code{dvMFangle} gives the density
-from this distribution. This function partly uses the code from the article
-Marsaglia et al. (2004).
+\code{rvMFangle()} generates random variates using the algorithm proposed in Kang
+and Oh (2024), and \code{dvMFangle} gives the density from this distribution. This
+function partly uses the code from the article Marsaglia et al. (2004).
 }
 \examples{
 rvMFangle(10, 2, 10)
@@ -47,6 +47,9 @@ dvMFangle(seq(-1,1,by=0.01), 2, 10)
 dvMFangle(seq(0,1,by=0.01), 3, 0.1)
 }
 \references{
+S. Kang and H.-S. Oh. Novel sampling method for the von Mises--Fisher
+distribution. \emph{Statistics and Computing}, 34(3):106, 2024.
+
 K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John Wiley
 & Sons, Chichester, 1999.
 

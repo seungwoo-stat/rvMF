@@ -4,11 +4,9 @@
 
 Fast Generation of von Mises-Fisher Distributed Pseudo-Random Vectors
 
-Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distribution on a sphere. This method is fast and efficient when generating a large number of pseudo-random vectors. Functions to generate random variates and compute density for the distribution of an inner product between von Mises-Fisher random vector and its mean direction are also provided.
+Generates pseudo-random vectors that follow an arbitrary von Mises-Fisher distribution on a sphere. This method is fast and efficient when generating a large number of pseudo-random vectors. Functions to generate random variates and compute density for the distribution of an inner product between von Mises-Fisher random vector and its mean direction are also provided. Details are in Kang and Oh (2024).
 
 Visit [this repo](https://github.com/seungwoo-stat/rvMF-paper) for code to reproduce the figures and tables from the paper Kang and Oh (2024).
-
-More details to be added.
 
 ### Installation
 
@@ -30,4 +28,4 @@ If error occurs during the installation, it may be related to the package `scMod
 
 ### Reference
 
--   Seungwoo Kang and Hee-Seok Oh. (2024) Novel Sampling Method for the von Mises--Fisher Distribution. *Statistics and Computing* **34**(3), 106.
+-   Seungwoo Kang and Hee-Seok Oh. (2024) [Novel Sampling Method for the von Mises--Fisher Distribution](https://doi.org/10.1007/s11222-024-10419-3). *Statistics and Computing* **34**(3), 106.

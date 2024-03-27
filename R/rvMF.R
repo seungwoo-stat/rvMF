@@ -2,8 +2,9 @@
 #'
 #' `rvMF()` generates von Mises--Fisher distributed pseudo-random vectors,
 #' without resorting to the rejection-based sampling method proposed by Wood
-#' (1994). This function partly uses the code from the function [Rfast::rvmf()]
-#' and the article Marsaglia et al. (2004).
+#' (1994). See Kang and Oh (2024) for details. This function partly uses the
+#' code from the function [Rfast::rvmf()] and the article Marsaglia et al.
+#' (2004).
 #'
 #' @param n number of pseudo-random vectors to generate.
 #' @param mu mean direction.
@@ -16,6 +17,9 @@
 #' rvMF(10, c(0,0,1), 10)
 #' rvMF(10, c(1,1)/sqrt(2), 0)
 #' @references
+#' S. Kang and H.-S. Oh. Novel sampling method for the von Mises--Fisher
+#' distribution. \emph{Statistics and Computing}, 34(3):106, 2024.
+#'
 #' K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John
 #' Wiley & Sons, Chichester, 1999.
 #'
@@ -80,9 +84,9 @@ rvMF <- function (n, mu, k)
 #' Specifically, if \eqn{X} follows a von Mises--Fisher distribution with mean
 #' direction \eqn{\mu}, the inner product \eqn{X'\mu} will be a random variable
 #' following some distribution. See page 170 of Mardia and Jupp (1999).
-#' `rvMFangle()` generates random variates, and `dvMFangle` gives the density
-#' from this distribution. This function partly uses the code from the article
-#' Marsaglia et al. (2004).
+#' `rvMFangle()` generates random variates using the algorithm proposed in Kang
+#' and Oh (2024), and `dvMFangle` gives the density from this distribution. This
+#' function partly uses the code from the article Marsaglia et al. (2004).
 #'
 #' @param n number of random vectors to generate.
 #' @param r vector of quantiles. \ifelse{html}{\out{-1 &le;} \code{r} \out{&le; 1}}{\eqn{-1\le r\le 1}}.
@@ -104,6 +108,9 @@ rvMF <- function (n, mu, k)
 #' dvMFangle(seq(0,1,by=0.01), 3, 0.1)
 #' @seealso [rvMF()] wrapper of `rvMFangle()`.
 #' @references
+#' S. Kang and H.-S. Oh. Novel sampling method for the von Mises--Fisher
+#' distribution. \emph{Statistics and Computing}, 34(3):106, 2024.
+#'
 #' K. V. Mardia and P. E. Jupp. \emph{Directional Statistics}, volume 494. John Wiley
 #' & Sons, Chichester, 1999.
 #'

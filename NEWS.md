@@ -1,6 +1,7 @@
-# rvMF 0.0.8.9000
+# rvMF 0.1.0
 
 - Typo fix in the document.
+- A [paper](https://doi.org/10.1007/s11222-024-10419-3) describing the implementation details of this package is published in *Statistics and Computing*. Description field is updated. Citation information is added as well.
 
 # rvMF 0.0.8
 
