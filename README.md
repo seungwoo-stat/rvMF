@@ -10,14 +10,14 @@ Visit [this repo](https://github.com/seungwoo-stat/rvMF-paper) for code to repro
 
 ### Installation
 
-Version 0.0.8 of this package is available on [CRAN](https://cran.r-project.org/package=rvMF):
+Version 0.1.0 of this package is available on [CRAN](https://cran.r-project.org/package=rvMF):
 
 ``` r
 install.packages("rvMF")
 library(rvMF)
 ```
 
-To use the development version (0.0.8.9000) of this package:
+To use the development version (currently equivalent to the CRAN version) of this package:
 
 ``` r
 devtools::install_github("seungwoo-stat/rvMF")
